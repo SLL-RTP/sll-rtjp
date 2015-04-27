@@ -1,0 +1,22 @@
+# Introduction #
+
+Usage of maven and git to release a stable version. The Git model is adapted from http://nvie.com/posts/a-successful-git-branching-model/
+
+Note: When creating a release from develop a auto merge is done to master branch by JGit plugin and the virtual release branch is then removed. All is handled by the JGit plugin on following the steps below.
+
+# Details #
+
+From your develop branch run (don't forget git pull is not updated)
+
+1. git checkout develop
+
+2. git pull origin develop
+
+3. `mvn jgitflow:release-start -DreleaseVersion=<version_to_be_released>`
+
+4. `mvn jgitflow:release-finish -DnoDeploy=true` (noDeploy is set to true since we don't use Nexus)
+Here you will be asked about the next version for the development branch. Increment the build version number and don't forget to suffix SNAPSHOT example 2.1-SNAPSHOT
+
+5. git push (Push your changes)
+
+6. git push --tags

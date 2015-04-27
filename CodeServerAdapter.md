@@ -1,0 +1,12 @@
+# Code Server Adapter #
+
+An information service returning commissions and associated payment responsible given a specific care unit (HSA-ID) and care service type.
+
+
+## Read More ##
+
+  * [Application architecture](CodeServerAdapterApplicationArchitecture.md)
+  * [Build](CodeServerAdapterBuild.md)
+  * [Configuration](CodeServerAdapterConfiguration.md)
+  * [Services](CodeServerAdapterServices.md)
+  * [Release](Release.md)
